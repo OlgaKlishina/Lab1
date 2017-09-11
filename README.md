@@ -14,3 +14,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+После чего сохранили данный код (путь:C:\Users\student\Desktop) с параметром .js.
+Проверили работоспособность системы, прописав следующие строки в консоле:
+npm -v - на выходе получили 5.3.0
+node -v - на выходе получили v8.4.0
