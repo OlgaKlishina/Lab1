@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Enter data:</h1>
+    <form action="/reg" method="post" name="registerForm">
+<textarea required value="text" name="EnterCode" onBlur="if(this.value=='')this.value='text'" onFocus="if(this.value=='text')this.value=''" ></textarea>
+        <input type="submit" value="Send" />
+    </form>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $("form").submit(function(e) {
+             
+            e.preventDefault();
+            var registerForm = document.forms["registerForm"];
+            var userName = registerForm.elements["EnterCode"].value;
+            var answer = document.createElement('div');
+	    answer.innerHTML="<h2>"+ registerForm.EnterCode.value.replace(/\s/g,"__");
+	    document.body.appendChild(answer);
+        });
+
+    </script>
+</body>
+</html>
